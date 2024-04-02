@@ -27,7 +27,7 @@ openai_api_key = os.environ.get("OPENAI_API_KEY")
 # print(config)
 
 
-def hello():
+def main():
     """Prints hello world
     Returns
     -------
@@ -45,4 +45,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    hello()
+    main()

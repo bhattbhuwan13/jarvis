@@ -9,4 +9,4 @@ authors = [{name = "Bhuwan Bhatt", email = "bhattbhuwan13@outlook.com"}]
 keywords = ["jarvis", "LLM", "personal assistant" ]
 
 [project.scripts]
-jarvis = "jarvis.__main__:hello"  
+jarvis = "jarvis.__main__:main"  
