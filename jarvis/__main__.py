@@ -39,7 +39,7 @@ def hello():
     chat_client = ChatGPT(openai_api_key, "gpt-3.5-turbo")
     result = chat_client.get_response(prompt)
 
-    syntax = Syntax(result, "python", theme="material")
+    syntax = Syntax(result, "python", theme="material", word_wrap=True, padding=2, code_width=200)
     console = Console()
     console.print(syntax)
 
