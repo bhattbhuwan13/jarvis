@@ -9,9 +9,7 @@ class ChatGPT:
 
         Parameters
         ----------
-        api_key : TODO
-
-
+        model_name : Exact model to use from the options
         """
 
         self._model_name = model_name
@@ -22,11 +20,11 @@ class ChatGPT:
 
         Parameters
         ----------
-        prompt : TODO
+        prompt : The prompt text to send to the chatGPT model
 
         Returns
         -------
-        TODO
+        Response from the ChatGPT agent
 
         """
         messages = [

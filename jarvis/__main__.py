@@ -27,15 +27,16 @@ def main():
     """Prints hello world
     Returns
     -------
-    TODO
-
+    None
     """
     prompt = " ".join(sys.argv[1:])
 
     chat_client = ChatGPT(openai_api_key, "gpt-3.5-turbo")
     result = chat_client.get_response(prompt)
 
-    syntax = Syntax(result, "python", theme="material", word_wrap=True, padding=2, code_width=200)
+    syntax = Syntax(
+        result, "python", theme="material", word_wrap=True, padding=2, code_width=200
+    )
     console = Console()
     console.print(syntax)
 
