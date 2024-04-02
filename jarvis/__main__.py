@@ -11,16 +11,12 @@ from jarvis.languagemodels.chatgpt import ChatGPT
 
 # Initialize parser
 
-parser = argparse.ArgumentParser()
-parser.add_argument("arg1")
-args = parser.parse_args()
+# parser = argparse.ArgumentParser()
+# parser.add_argument("arg1")
+# args = parser.parse_args()
 
 # Import the environment variables
 load_dotenv()
-# from dotenv import dotenv_values
-# config = dotenv_values(".env")  # config = {"USER": "foo", "EMAIL": "foo@example.org"}
-
-
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
 
