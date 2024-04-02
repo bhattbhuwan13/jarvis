@@ -10,8 +10,8 @@ def print_beautifully(text):
     TODO
 
     """
-    print("#"*50)
+    print("#" * 50)
     print("Hello world, the text is", text)
-    print("#"*50)
+    print("#" * 50)
 
-    return 
+    return
