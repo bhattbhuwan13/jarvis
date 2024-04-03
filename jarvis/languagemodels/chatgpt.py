@@ -12,7 +12,7 @@ class ChatGPT:
         model_name : Exact model to use from the options
         """
 
-        self._model_name = model_name
+        self.model_name = model_name
         self._client = OpenAI(api_key=api_key)
 
     def get_response(self, prompt):
@@ -32,7 +32,7 @@ class ChatGPT:
             {"role": "user", "content": prompt},
         ]
         completion = self._client.chat.completions.create(
-            model=self._model_name, messages=messages
+            model=self.model_name, messages=messages
         )
         response = completion.choices[0].message.content
         return response
