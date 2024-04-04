@@ -13,7 +13,19 @@ class ChatGPT:
         """
 
         self.model_name = model_name
-        self._client = OpenAI(api_key=api_key)
+        self._api_key = api_key
+
+    
+    def _create_client(self):
+        """Creates the openai client using api_key
+        Returns
+        -------
+        TODO
+
+        """
+        client = OpenAI(api_key=self._api_key)
+        return client
+
 
     def get_response(self, prompt):
         """Gets response from the ChatGPT
@@ -27,12 +39,16 @@ class ChatGPT:
         Response from the ChatGPT agent
 
         """
+        openai_chat_client = self._create_client()
+
         messages = [
             {"role": "system", "content": "You are an expert python programmer."},
             {"role": "user", "content": prompt},
         ]
-        completion = self._client.chat.completions.create(
+        completion = openai_chat_client.chat.completions.create(
             model=self.model_name, messages=messages
         )
         response = completion.choices[0].message.content
         return response
+
+
