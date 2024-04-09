@@ -15,7 +15,6 @@ class ChatGPT:
         self.model_name = model_name
         self._api_key = api_key
 
-    
     def _create_client(self):
         """Creates the openai client using api_key
         Returns
@@ -25,7 +24,6 @@ class ChatGPT:
         """
         client = OpenAI(api_key=self._api_key)
         return client
-
 
     def get_response(self, prompt):
         """Gets response from the ChatGPT
@@ -50,5 +48,3 @@ class ChatGPT:
         )
         response = completion.choices[0].message.content
         return response
-
-
