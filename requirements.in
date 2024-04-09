@@ -1,4 +1,6 @@
+-e .
 openai
 python-dotenv
 rich
--e .
+langchain
+langchain-openai
