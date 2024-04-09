@@ -4,3 +4,5 @@ python-dotenv
 rich
 langchain
 langchain-openai
+beautifulsoup4
+faiss-cpu
