@@ -161,3 +161,6 @@ cython_debug/
 
 data
 .tmuxinator.yml
+
+# Ignoring .DS_Store for mac
+.DS_Store
