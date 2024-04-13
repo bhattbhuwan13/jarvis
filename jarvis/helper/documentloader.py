@@ -1,10 +1,10 @@
+from abc import ABC, abstractmethod
 from pathlib import Path
-from abc import ABCMeta, abstrctmethod
 
 from langchain_community.document_loaders import TextLoader
 
 
-class FileLoader(ABCMeta):
+class FileLoader(ABC):
     """Abstract class for file loaders"""
 
     @abstractmethod
