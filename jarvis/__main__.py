@@ -41,7 +41,6 @@ def main():
     -------
     None
     """
-    print("the provided prompt is : ", args.prompt)
     prompt = " ".join(args.prompt)
 
     if args.rag:
